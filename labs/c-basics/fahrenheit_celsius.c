@@ -6,12 +6,15 @@
 
 /* print Fahrenheit-Celsius table */
 
-int main()
+int main(int argc, int **argv)
 {
-    int fahr;
+    int i;
 
-    for (fahr = LOWER; fahr <= UPPER; fahr = fahr + STEP)
-	printf("Fahrenheit: %3d, Celcius: %6.1f\n", fahr, (5.0/9.0)*(fahr-32));
+    for (i = 0; i < argc; i++){
+	printf("Fahrenheit: %3d, Celcius: %6.1f\n", argv[i], (5.0/9.0) * (argv[i]-32) );
+    }
+    printf("\n");
 
     return 0;
+
 }
