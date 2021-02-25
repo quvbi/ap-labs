@@ -4,7 +4,7 @@
 #define OUT  0   /* outside a word */
 
 
-char reverse(int lenght, char arr[]) {
+char *reverse(int lenght, char arr[]) {
 
     int i, tmp;
 
@@ -22,25 +22,26 @@ int main()
 {
     int i, state;
     state = OUT;
-    i = 0;
+    i = -1;
     char c, word[100];
     while ((c = getchar()) != EOF) {
-  
-	if (c == ' ' || c == '\n' || c == '\t'){
-
-	    state = OUT;
-        printf("%s", word);
-        i = 0;
-	}
-    else if (state == OUT) {
+  if (state == OUT) {
 
 	        state = IN;
             i = 0;
-            
+                   
+	    }
+	else if (c == ' ' || c == '\n' || c == '\t'){
 
-	    } else {
+	    state = OUT;
+        printf("%s", reverse(i,word));
+     //   printf("%d",i);
+        //i = 0;
+	} else {
+
             word[i] = c;
             i++;
+
         }
 
     }
