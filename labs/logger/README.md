@@ -26,6 +26,15 @@ General instructions
 - Don't forget to handle errors properly.
 - Coding best practices implementation will be also considered.
 
+// HOW TO EXECUTE CODE
+---------------------------
+- in the terminal type this commands
+
+1. gcc logger.c testLogger.c -o exec.o
+
+2. ./exec.o
+
+
 How to submit your work
 =======================
 ```
