@@ -35,6 +35,14 @@ Build and Test automation is already implemented with the following command. Bel
 
 ```
 make test
+
+// HOW TO EXECUTE CODE
+---------------------------
+- in the terminal type this commands
+
+1. gcc logger.c testLogger.c -o exec.o
+
+2. ./exec.o [# number of test]
 ```
 
 How to submit your work
